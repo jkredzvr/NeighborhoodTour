@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fork & Wander — Neighborhood Food Tours</title>
+    <title>Neighborhood Tour</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -514,61 +514,6 @@
         }
         .form-success p { font-size: 0.875rem; color: var(--sage); font-weight: 500; }
 
-        /* ABOUT SECTION */
-        .about-section {
-            background: var(--espresso);
-            color: var(--cream);
-            padding: 5rem 2rem;
-        }
-        .about-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-        .about-inner h2 { color: var(--gold); }
-        .about-inner p { color: rgba(250,247,242,0.7); line-height: 1.8; margin-top: 1rem; font-size: 0.95rem; }
-        .value-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; }
-        .value-item { display: flex; align-items: flex-start; gap: 14px; }
-        .value-icon {
-            width: 36px; height: 36px;
-            background: rgba(196,81,43,0.2);
-            border-radius: 8px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-        .value-text strong { display: block; font-size: 0.875rem; font-weight: 500; color: var(--cream); margin-bottom: 2px; }
-        .value-text span { font-size: 0.8rem; color: rgba(250,247,242,0.55); }
-
-        .about-quote {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-style: italic;
-            line-height: 1.5;
-            color: var(--cream);
-            position: relative;
-            padding-left: 1.5rem;
-            border-left: 3px solid var(--terracotta);
-        }
-        .quote-author {
-            margin-top: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .quote-avatar {
-            width: 44px; height: 44px;
-            border-radius: 50%;
-            background: var(--terracotta);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.1rem;
-        }
-        .quote-author strong { display: block; font-size: 0.875rem; color: var(--cream); }
-        .quote-author span { font-size: 0.78rem; color: rgba(250,247,242,0.5); }
-
         /* FOOTER */
         footer {
             background: #0F0B09;
@@ -585,7 +530,6 @@
             .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
             .hero-visual { display: none; }
             .tour-panel.active { grid-template-columns: 1fr; }
-            .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
             .stats-bar { flex-wrap: wrap; }
             .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
             nav { padding: 0 1rem; }
@@ -609,9 +553,8 @@
 <nav>
     <div class="nav-logo">Fork <span>&</span> Wander</div>
     <ul class="nav-links">
-        <li><a href="#tours">Our Tours</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#tours" onclick="document.querySelector('.join-btn').scrollIntoView({behavior:'smooth'})">Join a Tour</a></li>
+        <li><a href="#tours">Tours</a></li>
+        <li><a href="#tours" onclick="document.querySelector('.join-btn').scrollIntoView({behavior:'smooth'})">Tours</a></li>
     </ul>
 </nav>
 
@@ -621,11 +564,11 @@
     <div class="hero-grid-lines"></div>
     <div class="hero-inner">
         <div>
-            <div class="hero-label">🗺️ Small groups · Local guides · Real food</div>
+            <div class="hero-label">🗺️ Local gems · Good food</div>
             <h1>Eat your way through <em>LA's greatest</em> neighborhoods</h1>
             <p class="hero-desc">We lead intimate, curated walking tours through the city's most food-rich neighborhoods — biting into stories, cultures, and the recipes that define a community.</p>
             <div class="hero-actions">
-                <a href="#tours" class="hero-cta">Explore tours →</a>
+                <a href="#tours" class="hero-cta">Tours →</a>
                 <a href="#how-it-works" class="hero-cta-secondary">How it works ↓</a>
             </div>
         </div>
@@ -633,61 +576,20 @@
             <div class="tour-card-mini">
                 <div class="card-img wide">🌮🫔🍜</div>
                 <div class="card-meta">
-                    <strong>Grand Central Market</strong>
-                    <span>Downtown LA · Saturdays</span>
+                    <strong>Culver City</strong>
+                    <span>Culver City</span>
                 </div>
             </div>
             <div class="tour-card-mini">
                 <div class="card-img blue">🍣</div>
                 <div class="card-meta">
-                    <strong>Little Tokyo</strong>
-                    <span>Thursdays</span>
-                </div>
-            </div>
-            <div class="tour-card-mini">
-                <div class="card-img pink">🥐</div>
-                <div class="card-meta">
-                    <strong>Silver Lake</strong>
-                    <span>Sundays</span>
-                </div>
-            </div>
-            <div class="tour-card-mini">
-                <div class="card-img sage">🌿</div>
-                <div class="card-meta">
-                    <strong>Koreatown</strong>
-                    <span>Fridays</span>
-                </div>
-            </div>
-            <div class="tour-card-mini">
-                <div class="card-img">🫕</div>
-                <div class="card-meta">
-                    <strong>Boyle Heights</strong>
-                    <span>Weekends</span>
+                    <strong>TBD</strong>
+                    <span>TBD</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<!-- STATS -->
-<div class="stats-bar">
-    <div class="stat-item">
-        <span class="stat-num">6</span>
-        <span class="stat-label">Neighborhoods</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-num">8–12</span>
-        <span class="stat-label">Tastings per tour</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-num">2.5 hrs</span>
-        <span class="stat-label">Average duration</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-num">500+</span>
-        <span class="stat-label">Happy guests</span>
-    </div>
-</div>
 
 <!-- HOW IT WORKS -->
 <section class="how-section" id="how-it-works">
@@ -732,80 +634,59 @@
 
     <!-- TABS -->
     <div class="tour-tabs" role="tablist">
-        <button class="tab-btn active" onclick="showTour('dtla', this)" role="tab">
-            <span class="tab-icon">🏙️</span> Downtown LA
+        <button class="tab-btn active" onclick="showTour('culvercity', this)" role="tab">
+            <span class="tab-icon">🏙️</span> Culver City
         </button>
-        <button class="tab-btn" onclick="showTour('littletokyo', this)" role="tab">
-            <span class="tab-icon">🍜</span> Little Tokyo
-        </button>
-        <button class="tab-btn" onclick="showTour('silverlake', this)" role="tab">
-            <span class="tab-icon">☕</span> Silver Lake
-        </button>
-        <button class="tab-btn" onclick="showTour('koreatown', this)" role="tab">
-            <span class="tab-icon">🥩</span> Koreatown
-        </button>
-        <button class="tab-btn" onclick="showTour('boyleheights', this)" role="tab">
-            <span class="tab-icon">🌮</span> Boyle Heights
-        </button>
-        <button class="tab-btn" onclick="showTour('westhollywood', this)" role="tab">
-            <span class="tab-icon">🥂</span> West Hollywood
+        <button class="tab-btn" onclick="showTour('tbd', this)" role="tab">
+            <span class="tab-icon">🍜</span> TBD
         </button>
     </div>
 
-    <!-- DTLA PANEL -->
-    <div class="tour-panel active" id="panel-dtla">
+    <!-- CulverCity PANEL -->
+    <div class="tour-panel active" id="panel-culvercity">
         <div class="tour-info">
-            <div class="tour-badge badge-terracotta">🏙️ Downtown LA</div>
-            <h3>Grand Central Market & the DTLA Melting Pot</h3>
+            <div class="tour-badge badge-terracotta">🏙️ Culver City</div>
+            <h3>Culver City</h3>
             <p class="tour-desc">Start inside the 105-year-old Grand Central Market, where 30+ stalls serve everything from Salvadoran pupusas to artisan cheeseburgers. Then wind through the historic arts district, tasting tacos at spots locals have loved for decades, sipping craft coffee in converted warehouses, and finishing with churros at the oldest Mexican bakery in the city.</p>
             <div class="tour-meta-row">
                 <div class="meta-chip">
-                    <label>Days</label>
-                    <span>Sat & Sun</span>
+                    <label>Day</label>
+                    <span>TBD</span>
                 </div>
                 <div class="meta-chip">
                     <label>Duration</label>
-                    <span>2.5 hours</span>
-                </div>
-                <div class="meta-chip">
-                    <label>Group size</label>
-                    <span>Max 12 guests</span>
-                </div>
-                <div class="meta-chip">
-                    <label>Distance</label>
-                    <span>~1.2 miles</span>
+                    <span>9am-1pm</span>
                 </div>
             </div>
+            <h4>Itinerary</h4>
             <div class="tour-highlights">
-                <div class="highlight-item"><div class="highlight-dot"></div>8–10 tastings included</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>Vegetarian & vegan options available</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>Meets at Angels Flight Railway</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>Stories of LA's immigrant food history</div>
+                <div class="highlight-item"><div class="highlight-dot"></div>Breakfast at Destroyer</div>
+                <div class="highlight-item"><div class="highlight-dot"></div>Walk to The Platform</div>
+                <div class="highlight-item"><div class="highlight-dot"></div>Walk to Culver Steps</div>
+                <div class="highlight-item"><div class="highlight-dot"></div>Lunch TBD</div>
             </div>
         </div>
         <div class="tour-right">
             <div class="map-container">
-                <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7376698028024!2d-118.24920842358!3d34.050866018986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c648db3b8e4d%3A0x1a1d72c5d27a4c46!2sGrand%20Central%20Market!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="DTLA Tour Map">
-                </iframe>
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=13DzdrnW-GnVp7scnsKwErjRKibsfqHc&ehbc=2E312F&noprof=1"
+                        width="640" height="480"></iframe>
             </div>
             <div class="form-card">
                 <h4>Express interest in this tour</h4>
                 <p>Drop your details and we'll reach out with dates, pricing, and availability.</p>
-                <div class="form-row" id="form-dtla-row">
-                    <input class="form-input" type="text" placeholder="Your name" id="dtla-name">
-                    <input class="form-input" type="email" placeholder="Email address" id="dtla-email">
-                    <select class="form-input form-select" id="dtla-size">
+                <div class="form-row" id="form-culvercity-row">
+                    <input class="form-input" type="text" placeholder="Your name" id="culvercity-name">
+                    <input class="form-input" type="email" placeholder="Email address" id="culvercity-email">
+                    <select class="form-input form-select" id="culvercity-size">
                         <option value="">Party size</option>
                         <option>Just me</option>
                         <option>2 people</option>
                         <option>3–4 people</option>
                         <option>5+ people</option>
                     </select>
-                    <button class="form-submit" onclick="submitForm('dtla')">Reserve my spot →</button>
+                    <button class="form-submit" onclick="submitForm('culvercity')">Reserve my spot →</button>
                 </div>
-                <div class="form-success" id="success-dtla">
+                <div class="form-success" id="success-culvercity">
                     <div class="checkmark">✅</div>
                     <p>We'll be in touch soon! Check your inbox.</p>
                 </div>
@@ -814,7 +695,7 @@
     </div>
 
     <!-- LITTLE TOKYO PANEL -->
-    <div class="tour-panel" id="panel-littletokyo">
+    <div class="tour-panel" id="panel-tbd">
         <div class="tour-info">
             <div class="tour-badge badge-blue">🍜 Little Tokyo</div>
             <h3>Ramen, Wagashi & the Soul of Japanese LA</h3>
@@ -842,261 +723,21 @@
             <div class="form-card">
                 <h4>Express interest in this tour</h4>
                 <p>Drop your details and we'll reach out with dates, pricing, and availability.</p>
-                <div class="form-row" id="form-littletokyo-row">
-                    <input class="form-input" type="text" placeholder="Your name" id="littletokyo-name">
-                    <input class="form-input" type="email" placeholder="Email address" id="littletokyo-email">
-                    <select class="form-input form-select" id="littletokyo-size">
+                <div class="form-row" id="form-tbd-row">
+                    <input class="form-input" type="text" placeholder="Your name" id="tbd-name">
+                    <input class="form-input" type="email" placeholder="Email address" id="tbd-email">
+                    <select class="form-input form-select" id="tbd-size">
                         <option value="">Party size</option>
                         <option>Just me</option>
                         <option>2 people</option>
                         <option>3–4 people</option>
                         <option>5+ people</option>
                     </select>
-                    <button class="form-submit" onclick="submitForm('littletokyo')">Reserve my spot →</button>
+                    <button class="form-submit" onclick="submitForm('tbd')">Reserve my spot →</button>
                 </div>
-                <div class="form-success" id="success-littletokyo">
+                <div class="form-success" id="success-tbd">
                     <div class="checkmark">✅</div>
                     <p>We'll be in touch soon! Check your inbox.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- SILVER LAKE PANEL -->
-    <div class="tour-panel" id="panel-silverlake">
-        <div class="tour-info">
-            <div class="tour-badge badge-terracotta">☕ Silver Lake</div>
-            <h3>Third Wave Coffee, Natural Wine & Neighborhood Gems</h3>
-            <p class="tour-desc">Silver Lake has gone from bohemian to bona fide foodie destination. Walk the reservoir-lined streets visiting cult coffee roasters, natural wine bars with snacks to die for, and the Thai spots and taquerias that anchored the neighborhood long before the hype arrived.</p>
-            <div class="tour-meta-row">
-                <div class="meta-chip"><label>Days</label><span>Sundays</span></div>
-                <div class="meta-chip"><label>Duration</label><span>3 hours</span></div>
-                <div class="meta-chip"><label>Group size</label><span>Max 8 guests</span></div>
-                <div class="meta-chip"><label>Distance</label><span>~1.5 miles</span></div>
-            </div>
-            <div class="tour-highlights">
-                <div class="highlight-item"><div class="highlight-dot"></div>Coffee flights at two top roasters</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>Natural wine + cheese pairing</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>Reservoir scenic walk included</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>Meet local chefs & shop owners</div>
-            </div>
-        </div>
-        <div class="tour-right">
-            <div class="map-container">
-                <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6609.2!2d-118.2700!3d34.0870!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf47abde7dd5%3A0xa4f7de6a5e0a7f95!2sSilver%20Lake%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Silver Lake Tour Map">
-                </iframe>
-            </div>
-            <div class="form-card">
-                <h4>Express interest in this tour</h4>
-                <p>Drop your details and we'll reach out with dates, pricing, and availability.</p>
-                <div class="form-row" id="form-silverlake-row">
-                    <input class="form-input" type="text" placeholder="Your name" id="silverlake-name">
-                    <input class="form-input" type="email" placeholder="Email address" id="silverlake-email">
-                    <select class="form-input form-select" id="silverlake-size">
-                        <option value="">Party size</option>
-                        <option>Just me</option>
-                        <option>2 people</option>
-                        <option>3–4 people</option>
-                        <option>5+ people</option>
-                    </select>
-                    <button class="form-submit" onclick="submitForm('silverlake')">Reserve my spot →</button>
-                </div>
-                <div class="form-success" id="success-silverlake">
-                    <div class="checkmark">✅</div>
-                    <p>We'll be in touch soon! Check your inbox.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- KOREATOWN PANEL -->
-    <div class="tour-panel" id="panel-koreatown">
-        <div class="tour-info">
-            <div class="tour-badge badge-sage">🥩 Koreatown</div>
-            <h3>KBBQ, Banchan & Nighttime Flavors of K-Town</h3>
-            <p class="tour-desc">The densest neighborhood in LA is also one of its most electric. We navigate the warren of strip malls and multi-story food halls that house LA's best Korean BBQ, banchan (side dishes), soon tofu jjigae, and the dessert cafes open past midnight. This evening tour is best done hungry.</p>
-            <div class="tour-meta-row">
-                <div class="meta-chip"><label>Days</label><span>Fri & Sat</span></div>
-                <div class="meta-chip"><label>Duration</label><span>2.5 hours</span></div>
-                <div class="meta-chip"><label>Group size</label><span>Max 10 guests</span></div>
-                <div class="meta-chip"><label>Distance</label><span>~1 mile</span></div>
-            </div>
-            <div class="tour-highlights">
-                <div class="highlight-item"><div class="highlight-dot"></div>Live-fire Korean BBQ tasting</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>10+ banchan dishes to share</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>Korean soju & makgeolli tasting</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>Hidden multi-story food hall exploration</div>
-            </div>
-        </div>
-        <div class="tour-right">
-            <div class="map-container">
-                <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6609!2d-118.3000!3d34.0600!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b8dd52d4523b%3A0xb0d1dcea20d7fae6!2sKoreatown%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Koreatown Tour Map">
-                </iframe>
-            </div>
-            <div class="form-card">
-                <h4>Express interest in this tour</h4>
-                <p>Drop your details and we'll reach out with dates, pricing, and availability.</p>
-                <div class="form-row" id="form-koreatown-row">
-                    <input class="form-input" type="text" placeholder="Your name" id="koreatown-name">
-                    <input class="form-input" type="email" placeholder="Email address" id="koreatown-email">
-                    <select class="form-input form-select" id="koreatown-size">
-                        <option value="">Party size</option>
-                        <option>Just me</option>
-                        <option>2 people</option>
-                        <option>3–4 people</option>
-                        <option>5+ people</option>
-                    </select>
-                    <button class="form-submit" onclick="submitForm('koreatown')">Reserve my spot →</button>
-                </div>
-                <div class="form-success" id="success-koreatown">
-                    <div class="checkmark">✅</div>
-                    <p>We'll be in touch soon! Check your inbox.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- BOYLE HEIGHTS PANEL -->
-    <div class="tour-panel" id="panel-boyleheights">
-        <div class="tour-info">
-            <div class="tour-badge badge-gold">🌮 Boyle Heights</div>
-            <h3>Old-School Tacos, Tamales & East LA's Heartbeat</h3>
-            <p class="tour-desc">Before tacos went trendy, Boyle Heights was already a taco paradise. This tour is a homage to the Mexican-American community that has called this neighborhood home for generations — from 4am birria spots to hand-pressed tortilla ladies to the carnitas stand that hasn't changed since 1967.</p>
-            <div class="tour-meta-row">
-                <div class="meta-chip"><label>Days</label><span>Sat & Sun</span></div>
-                <div class="meta-chip"><label>Duration</label><span>2 hours</span></div>
-                <div class="meta-chip"><label>Group size</label><span>Max 14 guests</span></div>
-                <div class="meta-chip"><label>Distance</label><span>~1.3 miles</span></div>
-            </div>
-            <div class="tour-highlights">
-                <div class="highlight-item"><div class="highlight-dot"></div>Street taco crawl (6 stops!)</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>Tamale & atole from a family kitchen</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>Mariachi Plaza historic stop</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>Aguas frescas & Mexican candy</div>
-            </div>
-        </div>
-        <div class="tour-right">
-            <div class="map-container">
-                <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6608!2d-118.2120!3d34.0320!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c8a6f8b00001%3A0x0!2sBoyle%20Heights%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Boyle Heights Tour Map">
-                </iframe>
-            </div>
-            <div class="form-card">
-                <h4>Express interest in this tour</h4>
-                <p>Drop your details and we'll reach out with dates, pricing, and availability.</p>
-                <div class="form-row" id="form-boyleheights-row">
-                    <input class="form-input" type="text" placeholder="Your name" id="boyleheights-name">
-                    <input class="form-input" type="email" placeholder="Email address" id="boyleheights-email">
-                    <select class="form-input form-select" id="boyleheights-size">
-                        <option value="">Party size</option>
-                        <option>Just me</option>
-                        <option>2 people</option>
-                        <option>3–4 people</option>
-                        <option>5+ people</option>
-                    </select>
-                    <button class="form-submit" onclick="submitForm('boyleheights')">Reserve my spot →</button>
-                </div>
-                <div class="form-success" id="success-boyleheights">
-                    <div class="checkmark">✅</div>
-                    <p>We'll be in touch soon! Check your inbox.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- WEST HOLLYWOOD PANEL -->
-    <div class="tour-panel" id="panel-westhollywood">
-        <div class="tour-info">
-            <div class="tour-badge badge-blue">🥂 West Hollywood</div>
-            <h3>Celeb Haunts, Farmers Market & Sunset Strip Bites</h3>
-            <p class="tour-desc">WeHo is where LA's restaurant scene goes to show off. We take you behind the velvet rope — visiting the Saturday farmers market, a legendary deli, an old-school diner that survived the Sunset Strip's golden age, and the plant-based spots that are rewriting what LA eating looks like.</p>
-            <div class="tour-meta-row">
-                <div class="meta-chip"><label>Days</label><span>Sat mornings</span></div>
-                <div class="meta-chip"><label>Duration</label><span>2.5 hours</span></div>
-                <div class="meta-chip"><label>Group size</label><span>Max 12 guests</span></div>
-                <div class="meta-chip"><label>Distance</label><span>~1.4 miles</span></div>
-            </div>
-            <div class="tour-highlights">
-                <div class="highlight-item"><div class="highlight-dot"></div>WeHo Farmers Market tasting</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>An 80-year-old deli counter experience</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>Best plant-based bites in LA</div>
-                <div class="highlight-item"><div class="highlight-dot"></div>Sunset Strip history and stories</div>
-            </div>
-        </div>
-        <div class="tour-right">
-            <div class="map-container">
-                <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6607!2d-118.3617!3d34.0900!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bea86e4dcffd%3A0x2da84bc0d66cf62b!2sWest%20Hollywood%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="West Hollywood Tour Map">
-                </iframe>
-            </div>
-            <div class="form-card">
-                <h4>Express interest in this tour</h4>
-                <p>Drop your details and we'll reach out with dates, pricing, and availability.</p>
-                <div class="form-row" id="form-westhollywood-row">
-                    <input class="form-input" type="text" placeholder="Your name" id="westhollywood-name">
-                    <input class="form-input" type="email" placeholder="Email address" id="westhollywood-email">
-                    <select class="form-input form-select" id="westhollywood-size">
-                        <option value="">Party size</option>
-                        <option>Just me</option>
-                        <option>2 people</option>
-                        <option>3–4 people</option>
-                        <option>5+ people</option>
-                    </select>
-                    <button class="form-submit" onclick="submitForm('westhollywood')">Reserve my spot →</button>
-                </div>
-                <div class="form-success" id="success-westhollywood">
-                    <div class="checkmark">✅</div>
-                    <p>We'll be in touch soon! Check your inbox.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
-
-<!-- ABOUT -->
-<section class="about-section" id="about">
-    <div class="about-inner">
-        <div>
-            <h2>We believe food is the best tour guide</h2>
-            <p>Fork & Wander was born from a simple conviction: the most honest way to understand a city is through its food. Not just what's on the plate — but who made it, where they came from, and why it tastes the way it does.</p>
-            <div class="value-list">
-                <div class="value-item">
-                    <div class="value-icon">🤝</div>
-                    <div class="value-text">
-                        <strong>Community first</strong>
-                        <span>We partner with small, family-owned businesses and give back to local food access nonprofits.</span>
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">🔍</div>
-                    <div class="value-text">
-                        <strong>Deeply researched</strong>
-                        <span>Every stop is chosen after weeks of eating, conversation, and cultural research by our guides.</span>
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">👥</div>
-                    <div class="value-text">
-                        <strong>Always intimate</strong>
-                        <span>Maximum 14 guests per tour. No megaphone. No rush. Real conversation.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <p class="about-quote">"I've lived in LA for 15 years and Fork & Wander showed me places I'd never found. The Boyle Heights tour made me feel like I was eating history."</p>
-            <div class="quote-author">
-                <div class="quote-avatar">😊</div>
-                <div>
-                    <strong>Priya M.</strong>
-                    <span>Boyle Heights tour guest · March 2025</span>
                 </div>
             </div>
         </div>
